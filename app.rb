@@ -27,9 +27,13 @@ class Moncheck < Sinatra::Base
     erb :index
   end
 
-  get "/assets/app.js" do
+  get '/test' do
+    erb :test
+  end
+
+  get "/assets/scripts.js" do
     content_type("application/javascript")
-    settings.assets["app.js"]
+    settings.assets["scripts.js"]
   end
 
   get "/assets/screen.css" do

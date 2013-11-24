@@ -1,0 +1,104 @@
+@import "vendor/bootstrap";
+@mixin type-color($color, $color-l, $color-d){
+  background-color: $color;
+  border-left-color: $color-l;
+  border-top-color: $color-l;
+  border-right-color: $color-d;
+  border-bottom-color: $color-d;
+  color: darken($color-d, 10%);
+}
+@mixin content-type-color($color){
+  @include gradient-vertical(white, $color);
+  p{ color: darken($color, 10%); }
+}
+
+$bug: #A9B921;
+$bug-l: #DCE3A6;
+$bug-d: #656D13;
+.bug{ @include type-color($bug, $bug-l, $bug-d); }
+.content-bug{ @include content-type-color($bug-l); }
+$dark: #705848;
+$dark-l: #C5BDB6;
+$dark-d: #41332A;
+.dark{ @include type-color($dark, $dark-l, $dark-d); }
+.content-dark{ @include content-type-color($dark-l); }
+$dragon: #733DF8;
+$dragon-l: #C7B2FC;
+$dragon-d: #442395;
+.dragon{ @include type-color($dragon, $dragon-l, $dragon-d); }
+.content-dragon{ @include content-type-color($dragon-l); }
+$electric: #F8D33E;
+$electric-l: #FBEDB2;
+$electric-d: #947D23;
+.electric{ @include type-color($electric, $electric-l, $electric-d); }
+.content-electric{ @include content-type-color($electric-l); }
+$fairy: #FFC1FB;
+$fairy-l: #FEE4FD;
+$fairy-d: #987196;
+.fairy{ @include type-color($fairy, $fairy-l, $fairy-d); }
+.content-fairy{ @include content-type-color($fairy); }
+$fighting: #C33930;
+$fighting-l: #E7B0AD;
+$fighting-d: #74211C;
+.fighting{ @include type-color($fighting, $fighting-l, $fighting-d); }
+.content-fighting{ @include content-type-color($fighting-l); }
+$fire: #F18133;
+$fire-l: #F9CCAD;
+$fire-d: #8E4C1D;
+.fire{ @include type-color($fire, $fire-l, $fire-d); }
+.content-fire{ @include content-type-color($fire-l); }
+$flying: #A790F0;
+$flying-l: #DBD2F9;
+$flying-d: #63548F;
+.flying{ @include type-color($flying, $flying-l, $flying-d); }
+.content-flying{ @include content-type-color($flying-l); }
+$ghost: #715998;
+$ghost-l: #C6BCD5;
+$ghost-d: #413459;
+.ghost{ @include type-color($ghost, $ghost-l, $ghost-d); }
+.content-ghost{ @include content-type-color($ghost-l); }
+$grass: #86CE63;
+$grass-l: #CEEBC0;
+$grass-d: #4E7A39;
+.grass{ @include type-color($grass, $grass-l, $grass-d); }
+.content-grass{ @include content-type-color($grass-l); }
+$ground: #E0C068;
+$ground-l: #F2E5C2;
+$ground-d: #84713D;
+.ground{ @include type-color($ground, $ground-l, $ground-d); }
+.content-ground{ @include content-type-color($ground-l); }
+$ice: #A1DCDC;
+$ice-l: #D9F0F0;
+$ice-d: #5E8383;
+.ice{ @include type-color($ice, $ice-l, $ice-d); }
+.content-ice{ @include content-type-color($ice-l); }
+$normal: #A8A878;
+$normal-l: #DBDCC8;
+$normal-d: #626246;
+.normal{ @include type-color($normal, $normal-l, $normal-d); }
+.content-normal{ @include content-type-color($normal-l); }
+$poison: #A0409F;
+$poison-l: #D7B1D8;
+$poison-d: #5D235E;
+.poison{ @include type-color($poison, $poison-l, $poison-d); }
+.content-poison{ @include content-type-color($poison-l); }
+$psychic: #F85888;
+$psychic-l: #FBBCCF;
+$psychic-d: #943350;
+.psychic{ @include type-color($psychic, $psychic-l, $psychic-d); }
+.content-psychic{ @include content-type-color($psychic-l); }
+$rock: #B9A139;
+$rock-l: #E2D9B0;
+$rock-d: #6D5F1F;
+.rock{ @include type-color($rock, $rock-l, $rock-d); }
+.content-rock{ @include content-type-color($rock-l); }
+$steel: #B8B8D0;
+$steel-l: #E3E2EC;
+$steel-d: #6C6B7A;
+.steel{ @include type-color($steel, $steel-l, $steel-d); }
+.content-steel{ @include content-type-color($steel); }
+$water: #6F96F1;
+$water-l: #C6D4F9;
+$water-d: #405790;
+.water{ @include type-color($water, $water-l, $water-d); }
+.content-water{ @include content-type-color($water-l); }
