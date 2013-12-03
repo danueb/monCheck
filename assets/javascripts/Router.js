@@ -3,6 +3,9 @@ App.Router = Backbone.Router.extend({
     "": "index"
   },
   
-  index: function() {}
+  index: function() {},
+  mon: function(monName) {
+    App.viewMaster.setCurrentMon(monName);
+  }
 
 });

@@ -68,29 +68,35 @@ describe('App.Model.StateMachine', function() {
 
   describe('navigation', function(){
     describe('#goToMon', function(){
+      beforeEach(function() {
+        this.navigateStub = sinon.stub(App.router, 'navigate', function(){});
+      });
+      afterEach(function() {
+        this.navigateStub.restore();
+      });
       it('should be defined', function(){
         expect(this.viewMaster.goToMon).toBeDefined();
       });
       describe('when given a numerical argument', function(){
-        it('should change to the correct mon, if it exists', function(){
+        it('should change url to match that mon, if it exists', function(){
           this.viewMaster.goToMon(1);
-          expect(this.viewMaster.get('currentMon')).toBe(1);
+          expect(this.navigateStub).toHaveBeenCalledWith('/mon/bulbasaur');
         });
         it('should do nothing if the id matches no mon', function(){
           this.viewMaster.goToMon(0);
-          expect(this.viewMaster.get('currentMon')).toBeNull();
+          expect(this.navigateStub).not.toHaveBeenCalled(); 
           this.viewMaster.goToMon(10);
-          expect(this.viewMaster.get('currentMon')).toBeNull();
+          expect(this.navigateStub).not.toHaveBeenCalled(); 
         });
       });
       describe('when given a string argument', function(){
-        it('should change to the mon with that name, if it exists', function(){
+        it('should change url to match that mon, if it exists', function(){
           this.viewMaster.goToMon('Bulbasaur');
-          expect(this.viewMaster.get('currentMon')).toBe(1);
+          expect(this.navigateStub).toHaveBeenCalledWith('/mon/bulbasaur'); 
         });
         it('should do nothing if the name matches no mon', function(){
           this.viewMaster.goToMon('Ubuntu');
-          expect(this.viewMaster.get('currentMon')).toBeNull();
+          expect(this.navigateStub).not.toHaveBeenCalled(); 
         });
       });
     });

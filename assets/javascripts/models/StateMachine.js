@@ -20,19 +20,19 @@ App.Models.StateMachine = Backbone.Model.extend({
     return this.get('mons').get(this.get('currentMon'));
   },
 
+  setCurrentMon: function(id){
+    var mon = this.get('mons').findMon(id);
+    if(mon){
+      this.set({ 'currentMon': this.get('mons').findMon(id).get('id') });
+    }
+  },
+
   /* navigation */
 
   goToMon: function(id){
-    var mon;
-    if(/^-?[\d.]+(?:e-?\d+)?$/.test(id)){ // if id is a number
-      if(id <= this.get('mons').length && id > 0){
-        this.set({ 'currentMon': id });
-      }
-    } else {
-      mon = this.get('mons').findWhere({ 'name': id.toLowerCase() });
-      if (mon){
-        this.set({ 'currentMon': mon.get('id') });
-      }
+    var mon = this.get('mons').findMon(id);
+    if(mon){
+      App.router.navigate('/mon/' + mon.get('name'));
     }
   }
 });
