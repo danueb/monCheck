@@ -1,0 +1,536 @@
+[
+  {
+    "id": "1",
+    "name": "bulbasaur",
+    "type1": "grass",
+    "type2": "poison",
+    "gen": 1,
+    "genPos": 0,
+    "4x-weak": [],
+    "2x-weak": [
+      "fire",
+      "ice",
+      "flying",
+      "psychic"
+    ],
+    "normal-damage": [
+      "normal",
+      "poison",
+      "ground",
+      "bug",
+      "rock",
+      "ghost",
+      "dragon",
+      "dark",
+      "steel"
+    ],
+    "2x-resistant": [
+      "water",
+      "electric",
+      "fighting",
+      "fairy"
+    ],
+    "4x-resistant": [
+      "grass"
+    ],
+    "immune": []
+  },
+  {
+    "id": "2",
+    "name": "ivysaur",
+    "type1": "grass",
+    "type2": "poison",
+    "gen": 1,
+    "genPos": 1,
+    "4x-weak": [],
+    "2x-weak": [
+      "fire",
+      "ice",
+      "flying",
+      "psychic"
+    ],
+    "normal-damage": [
+      "normal",
+      "poison",
+      "ground",
+      "bug",
+      "rock",
+      "ghost",
+      "dragon",
+      "dark",
+      "steel"
+    ],
+    "2x-resistant": [
+      "water",
+      "electric",
+      "fighting",
+      "fairy"
+    ],
+    "4x-resistant": [
+      "grass"
+    ],
+    "immune": []
+  },
+  {
+    "id": "3",
+    "name": "venusaur",
+    "type1": "grass",
+    "type2": "poison",
+    "gen": 1,
+    "genPos": 2,
+    "4x-weak": [],
+    "2x-weak": [
+      "fire",
+      "ice",
+      "flying",
+      "psychic"
+    ],
+    "normal-damage": [
+      "normal",
+      "poison",
+      "ground",
+      "bug",
+      "rock",
+      "ghost",
+      "dragon",
+      "dark",
+      "steel"
+    ],
+    "2x-resistant": [
+      "water",
+      "electric",
+      "fighting",
+      "fairy"
+    ],
+    "4x-resistant": [
+      "grass"
+    ],
+    "immune": []
+  },
+  {
+    "id": "4",
+    "name": "charmander",
+    "type1": "fire",
+    "type2": "",
+    "gen": 1,
+    "genPos": 3,
+    "4x-weak": [],
+    "2x-weak": [
+      "ground",
+      "rock",
+      "water"
+    ],
+    "normal-damage": [
+      "normal",
+      "fighting",
+      "flying",
+      "poison",
+      "ghost",
+      "electric",
+      "psychic",
+      "dragon",
+      "dark"
+    ],
+    "2x-resistant": [
+      "bug",
+      "steel",
+      "fire",
+      "grass",
+      "ice",
+      "fairy"
+    ],
+    "4x-resistant": [],
+    "immune": []
+  },
+  {
+    "id": "5",
+    "name": "charmeleon",
+    "type1": "fire",
+    "type2": "",
+    "gen": 1,
+    "genPos": 4,
+    "4x-weak": [],
+    "2x-weak": [
+      "ground",
+      "rock",
+      "water"
+    ],
+    "normal-damage": [
+      "normal",
+      "fighting",
+      "flying",
+      "poison",
+      "ghost",
+      "electric",
+      "psychic",
+      "dragon",
+      "dark"
+    ],
+    "2x-resistant": [
+      "bug",
+      "steel",
+      "fire",
+      "grass",
+      "ice",
+      "fairy"
+    ],
+    "4x-resistant": [],
+    "immune": []
+  },
+  {
+    "id": "6",
+    "name": "charizard",
+    "type1": "fire",
+    "type2": "flying",
+    "gen": 1,
+    "genPos": 5,
+    "4x-weak": [
+      "rock"
+    ],
+    "2x-weak": [
+      "electric",
+      "water"
+    ],
+    "normal-damage": [
+      "normal",
+      "flying",
+      "poison",
+      "ghost",
+      "psychic",
+      "ice",
+      "dragon",
+      "dark"
+    ],
+    "2x-resistant": [
+      "fighting",
+      "steel",
+      "fire",      
+      "fairy"
+    ],
+    "4x-resistant": [
+      "bug",
+      "grass"
+    ],
+    "immune": [
+      "ground"
+    ]
+  },
+  {
+    "id": "7",
+    "name": "squirtle",
+    "type1": "water",
+    "type2": "",
+    "gen": 1,
+    "genPos": 6,
+    "4x-weak": [],
+    "2x-weak": [
+      "electric",
+      "grass"
+    ],
+    "normal-damage": [
+      "normal",
+      "fighting",
+      "flying",
+      "poison",
+      "ground",
+      "rock",
+      "bug",
+      "ghost",
+      "psychic",
+      "dragon",
+      "dark",
+      "fairy"
+    ],
+    "2x-resistant": [
+      "steel",
+      "fire",
+      "water",      
+      "ice"
+    ],
+    "4x-resistant": [],
+    "immune": []
+  },
+  {
+    "id": "8",
+    "name": "wartortle",
+    "type1": "water",
+    "type2": "",
+    "gen": 1,
+    "genPos": 7,
+    "4x-weak": [],
+    "2x-weak": [
+      "electric",
+      "grass"
+    ],
+    "normal-damage": [
+      "normal",
+      "fighting",
+      "flying",
+      "poison",
+      "ground",
+      "rock",
+      "bug",
+      "ghost",
+      "psychic",
+      "dragon",
+      "dark",
+      "fairy"
+    ],
+    "2x-resistant": [
+      "steel",
+      "fire",
+      "water",      
+      "ice"
+    ],
+    "4x-resistant": [],
+    "immune": []
+  },
+  {
+    "id": "9",
+    "name": "blastoise",
+    "type1": "water",
+    "type2": "",
+    "gen": 1,
+    "genPos": 8,
+    "4x-weak": [],
+    "2x-weak": [
+      "electric",
+      "grass"
+    ],
+    "normal-damage": [
+      "normal",
+      "fighting",
+      "flying",
+      "poison",
+      "ground",
+      "rock",
+      "bug",
+      "ghost",
+      "psychic",
+      "dragon",
+      "dark",
+      "fairy"
+    ],
+    "2x-resistant": [
+      "steel",
+      "fire",
+      "water",      
+      "ice"
+    ],
+    "4x-resistant": [],
+    "immune": []
+  },
+  {
+    "id": "10",
+    "name": "caterpie",
+    "type1": "bug",
+    "type2": "",
+    "gen": 1,
+    "genPos": 9,
+    "4x-weak": [],
+    "2x-weak": [
+      "flying",
+      "rock",
+      "fire"
+    ],
+    "normal-damage": [
+      "normal",
+      "poison",
+      "bug",
+      "ghost",
+      "steel",
+      "water",
+      "electric",
+      "psychic",
+      "ice",
+      "dragon",
+      "dark",
+      "fairy"
+    ],
+    "2x-resistant": [
+      "fighting",
+      "ground",
+      "grass"
+    ],
+    "4x-resistant": [],
+    "immune": []
+  },
+  {
+    "id": "11",
+    "name": "metapod",
+    "type1": "bug",
+    "type2": "",
+    "gen": 1,
+    "genPos": 10,
+    "4x-weak": [],
+    "2x-weak": [
+      "flying",
+      "rock",
+      "fire"
+    ],
+    "normal-damage": [
+      "normal",
+      "poison",
+      "bug",
+      "ghost",
+      "steel",
+      "water",
+      "electric",
+      "psychic",
+      "ice",
+      "dragon",
+      "dark",
+      "fairy"
+    ],
+    "2x-resistant": [
+      "fighting",
+      "ground",
+      "grass"
+    ],
+    "4x-resistant": [],
+    "immune": []
+  },
+  {
+    "id": "12",
+    "name": "butterfree",
+    "type1": "bug",
+    "type2": "flying",
+    "gen": 1,
+    "genPos": 11,
+    "4x-weak": [
+      "rock"
+    ],
+    "2x-weak": [
+      "flying",
+      "fire",
+      "electric",
+      "ice"
+    ],
+    "normal-damage": [
+      "normal",
+      "poison",
+      "ghost",
+      "steel",
+      "water",
+      "psychic",
+      "dragon",
+      "dark",
+      "fairy"
+    ],
+    "2x-resistant": [
+      "bug",
+      "grass"
+    ],
+    "4x-resistant": [
+      "fighting"
+    ],
+    "immune": [
+      "ground"
+    ]
+  },
+  {
+    "id": "13",
+    "name": "weedle",
+    "type1": "bug",
+    "type2": "poison",
+    "gen": 1,
+    "genPos": 12,
+    "4x-weak": [],
+    "2x-weak": [
+      "flying",
+      "rock",
+      "fire",
+      "psychic"
+    ],
+    "normal-damage": [
+      "normal",
+      "ground",
+      "ghost",
+      "steel",
+      "water",
+      "electric",
+      "ice",
+      "dragon",
+      "dark"
+    ],
+    "2x-resistant": [
+      "poison",
+      "bug",
+      "fairy"
+    ],
+    "4x-resistant": [
+      "fighting"
+    ],
+    "immune": []
+  },
+  {
+    "id": "14",
+    "name": "kakuna",
+    "type1": "bug",
+    "type2": "poison",
+    "gen": 1,
+    "genPos": 13,
+    "4x-weak": [],
+    "2x-weak": [
+      "flying",
+      "rock",
+      "fire",
+      "psychic"
+    ],
+    "normal-damage": [
+      "normal",
+      "ground",
+      "ghost",
+      "steel",
+      "water",
+      "electric",
+      "ice",
+      "dragon",
+      "dark"
+    ],
+    "2x-resistant": [
+      "poison",
+      "bug",
+      "fairy"
+    ],
+    "4x-resistant": [
+      "fighting"
+    ],
+    "immune": []
+  },
+  {
+    "id": "15",
+    "name": "beedrill",
+    "type1": "bug",
+    "type2": "poison",
+    "gen": 1,
+    "genPos": 14,
+    "4x-weak": [],
+    "2x-weak": [
+      "flying",
+      "rock",
+      "fire",
+      "psychic"
+    ],
+    "normal-damage": [
+      "normal",
+      "ground",
+      "ghost",
+      "steel",
+      "water",
+      "electric",
+      "ice",
+      "dragon",
+      "dark"
+    ],
+    "2x-resistant": [
+      "poison",
+      "bug",
+      "fairy"
+    ],
+    "4x-resistant": [
+      "fighting"
+    ],
+    "immune": []
+  }
+]

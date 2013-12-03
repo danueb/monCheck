@@ -24,11 +24,16 @@ class Moncheck < Sinatra::Base
 
   ## Routing ##
   get '/' do
+    @mons ||= File.read(settings.root + '/assets/javascripts/mons.json')
     erb :index
   end
 
   get '/test' do
     erb :test
+  end
+
+  get '/whoop' do
+    settings.root
   end
 
   get "/assets/scripts.js" do

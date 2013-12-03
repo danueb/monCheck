@@ -2,21 +2,55 @@
 
 describe('App.Models.Mon', function() {
   beforeEach(function() {
-    this.mon = new App.Models.Mon();
+    this.monSeedData = {
+      "id": "15",
+      "name": "beedrill",
+      "type1": "bug",
+      "type2": "poison",
+      "gen": 1,
+      "genPos": 14
+    }
+    this.mon = new App.Models.Mon(this.monSeedData);
   });
 
   it('can be instantiated', function() {
     expect(this.mon).not.toBeNull();
   });
+
+  describe("sprite coords", function(){
+    it("should be correct", function() {
+      expect(this.mon.get('spriteX')).toBe(-96);
+      expect(this.mon.get('spriteY')).toBe(-96);
+    });
+  });
+
 });
 
 describe('App.Collections.Mons', function() {
   beforeEach(function(){
-    this.mons = new App.Collections.Mons();
+    this.monSeedData = [
+      { id: 1, name: "bulbasaur"},
+      { id: 2, name: "ivysaur"},
+      { id: 1, name: "venuasur"},
+      { id: 2, name: "charmander"},
+      { id: 1, name: "charmeleon"},
+      { id: 2, name: "charizard"},
+      { id: 1, name: "squirtle"},
+      { id: 2, name: "wartortle"},
+      { id: 1, name: "blastoise"}
+    ];
+    this.mons = new App.Collections.Mons(this.monSeedData);
   });
 
   it('can be instantiated', function() {
     expect(this.mons).not.toBeNull();
+  });
+
+  describe('#getNameList', function() {
+    it('should return a list of mon names', function(){
+      var list = this.mons.getNameList();
+      expect(list[0]).toBe('bulbasaur');
+    });
   });
 
   describe('#fetch', function() {

@@ -1,5 +1,12 @@
 App.Models.Mon = Backbone.Model.extend({
-
+  initialize: function(){
+    var x = 0 - (Math.floor(this.get('genPos') / 
+      App.Constants.SpriteKey[this.get('gen')]) * App.Constants.SpriteOffset);
+    var y = 0 - (this.get('genPos') % 
+      App.Constants.SpriteKey[this.get('gen')] * App.Constants.SpriteOffset);
+    this.set({spriteX: x});
+    this.set({spriteY: y});
+  }  
 });
 
 App.Collections.Mons = Backbone.Collection.extend({
@@ -19,5 +26,9 @@ App.Collections.Mons = Backbone.Collection.extend({
       }
     }
     return null;
+  },
+
+  getNameList: function(){
+    return _.pluck(this.toJSON(), 'name');
   }
 });

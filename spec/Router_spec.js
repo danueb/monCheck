@@ -20,13 +20,13 @@ describe("App.Router", function() {
         // assuming all navigation in this scope is to a mon
         App.router.mon(frag);
       });
-      this.setCurrentMonStub = sinon.stub(App.viewMaster, 'setCurrentMon', function(id){
-        that.viewMaster.setCurrentMon(id);
+      this.goToMonStub = sinon.stub(App.viewMaster, 'goToMon', function(id){
+        that.viewMaster.goToMon(id);
       });
     });
     afterEach(function() {
       this.updateHashStub.restore();
-      this.setCurrentMonStub.restore();
+      this.goToMonStub.restore();
       App.router.navigate('');
     });
     describe("with a mon name that exists", function() {
