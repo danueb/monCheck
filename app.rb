@@ -24,6 +24,18 @@ class Moncheck < Sinatra::Base
     end
   end
 
+  def authorized?
+    @auth ||=  Rack::Auth::Basic::Request.new(request.env)
+    @auth.provided? && @auth.basic? && @auth.credentials && @auth.credentials == [ENV['username'],ENV['password']]
+  end
+
+  def protected!
+    unless authorized?
+      response['WWW-Authenticate'] = %(Basic realm="Restricted Area")
+      throw(:halt, [401, "Nope, nothing to see here.\n"])
+    end
+  end
+
   ## Models ##
   DataMapper.setup(:default, ENV['DATABASE_URL'] || "postgres://localhost/moncheck_dev")
 
@@ -38,6 +50,7 @@ class Moncheck < Sinatra::Base
   end
 
   get '/admin' do
+    protected!
     erb :admin
   end
 
