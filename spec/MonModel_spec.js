@@ -31,13 +31,13 @@ describe('App.Collections.Mons', function() {
     this.monSeedData = [
       { id: 1, name: "bulbasaur"},
       { id: 2, name: "ivysaur"},
-      { id: 1, name: "venuasur"},
-      { id: 2, name: "charmander"},
-      { id: 1, name: "charmeleon"},
-      { id: 2, name: "charizard"},
-      { id: 1, name: "squirtle"},
-      { id: 2, name: "wartortle"},
-      { id: 1, name: "blastoise"}
+      { id: 3, name: "venuasur"},
+      { id: 4, name: "charmander"},
+      { id: 5, name: "charmeleon"},
+      { id: 6, name: "charizard"},
+      { id: 7, name: "squirtle"},
+      { id: 8, name: "wartortle"},
+      { id: 9, name: "blastoise"}
     ];
     this.mons = new App.Collections.Mons(this.monSeedData);
   });

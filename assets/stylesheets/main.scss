@@ -202,6 +202,9 @@ body {
         letter-spacing: 1px;
         line-height: 50px;
       }
+      .type{
+        @include type();
+      }
       .type1, .type2{
         @include type();
         width: 85px;

@@ -13,6 +13,9 @@ App.Views.Main = Backbone.View.extend({
     this.createMonView();
     this.listenTo(this.model, 'change:currentView', this.toggleSubviews);
     this.listenTo(this.model, 'change:currentMon', this.update);
+
+    // Can't really do this with backbone events, unfortunately :( 
+    $('body').keyup(this.handleKey);
   },
 
   update: function() {
@@ -49,6 +52,19 @@ App.Views.Main = Backbone.View.extend({
       this.pokemonView = new App.Views.Mon({
         model: currentMon
       });
+    }
+  },
+
+  handleKey: function(e) {
+    // I really wish I could do this the backbone way, 
+    // but it doesn't look possible
+    if ($(e.target).is('input')) { return true }
+    if(App.viewMaster.onHome() && App.viewMaster.currentMon()){
+      if(e.keyCode === 37){
+        App.viewMaster.goToPrevMon();
+      } else if(e.keyCode === 39){
+        App.viewMaster.goToNextMon();
+      }
     }
   }
 });

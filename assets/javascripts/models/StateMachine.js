@@ -28,5 +28,23 @@ App.Models.StateMachine = Backbone.Model.extend({
       App.router.navigate('/mon/' + mon.get('name'));
       this.set({ 'currentMon': this.get('mons').findMon(id).get('id') });
     }
+  },
+
+  goToPrevMon: function(){
+    var currentMonId = parseInt(this.get('currentMon'));
+    if( currentMonId === 1){
+      this.goToMon(this.get('mons').length);
+    } else if( currentMonId != null ){
+      this.goToMon(currentMonId - 1);
+    }
+  },
+
+  goToNextMon: function(){
+    var currentMonId = parseInt(this.get('currentMon'));
+    if( currentMonId === this.get('mons').length){
+      this.goToMon(1);
+    } else if( currentMonId != null ){
+      this.goToMon(currentMonId + 1);
+    }
   }
 });
