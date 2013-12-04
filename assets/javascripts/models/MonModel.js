@@ -19,7 +19,7 @@ App.Collections.Mons = Backbone.Collection.extend({
       if(id <= this.length && id > 0){
         return this.get(id);
       }
-    } else {
+    } else if(id.toLowerCase) {
       mon = this.findWhere({ 'name': id.toLowerCase() });
       if (mon){
         return mon;

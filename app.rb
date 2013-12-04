@@ -15,6 +15,15 @@ class Moncheck < Sinatra::Base
     })
   end
 
+  configure :development do
+    env_file = File.join(settings.root, 'config.yml')
+    if File.exists?(env_file)
+      YAML.load(File.open(env_file))['development'].each do |key, value|
+        ENV[key.to_s] = value
+      end
+    end
+  end
+
   ## Models ##
   DataMapper.setup(:default, ENV['DATABASE_URL'] || "postgres://localhost/moncheck_dev")
 
@@ -28,12 +37,8 @@ class Moncheck < Sinatra::Base
     erb :index
   end
 
-  get '/test' do
-    erb :test
-  end
-
-  get '/whoop' do
-    settings.root
+  get '/admin' do
+    erb :admin
   end
 
   get "/assets/scripts.js" do
