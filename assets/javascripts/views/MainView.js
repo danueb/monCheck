@@ -3,6 +3,7 @@ App.Views.Main = Backbone.View.extend({
 
   initialize: function(){
     _.bindAll(this, 'createMonView', 'toggleSubviews', 'render', 'update');
+    this.aboutView = new App.Views.About();
     this.headerView = new App.Views.Header({
       viewMaster: this.model
     });
@@ -29,7 +30,6 @@ App.Views.Main = Backbone.View.extend({
   },
 
   render: function() {
-    // $(this.el).append(this.aboutView.render().el);
     // $(this.el).append(this.chartView.render().el);
     $(this.el).append(this.searchView.render().el);
     if(this.pokemonView){
@@ -40,10 +40,10 @@ App.Views.Main = Backbone.View.extend({
   },
 
   toggleSubviews: function() {
-    // this.$('.about').toggle(this.model.onAbout());
+    $('#abt').toggle(this.model.onAbout());
     // this.$('.chart').toggle(this.model.onChart());
     this.$('.search').toggle(this.model.onHome());
-    // this.$('.pokemon').toggle(this.model.onHome());
+    this.$('.mon').toggle(this.model.onHome());
   },
 
   createMonView: function() {

@@ -15,7 +15,9 @@ App.Collections.Mons = Backbone.Collection.extend({
 
   findMon: function(id){
     var mon;
-    if(/^-?[\d.]+(?:e-?\d+)?$/.test(id)){ // if id is a number
+    if(!id){
+      return null;
+    } else if(/^-?[\d.]+(?:e-?\d+)?$/.test(id)){ // if id is a number
       if(id <= this.length && id > 0){
         return this.get(id);
       }

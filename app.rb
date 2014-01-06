@@ -40,23 +40,33 @@ class Moncheck < Sinatra::Base
   DataMapper.setup(:default, ENV['DATABASE_URL'] || "postgres://localhost/moncheck_dev")
 
   # here be models
-
   DataMapper.finalize.auto_upgrade!
+
 
   ## Routing ##
   get '/' do
+    @title = "monCheck"
+    @js_url = "/assets/scripts.js"
     @mons ||= File.read(settings.root + '/assets/javascripts/mons.json')
     erb :index
   end
 
   get '/admin' do
     protected!
+    @title = "monCheck admin"
+    @js_url = "/assets/admin.js"
+    @mons ||= File.read(settings.root + '/assets/javascripts/mons.json')
     erb :admin
   end
 
   get "/assets/scripts.js" do
     content_type("application/javascript")
     settings.assets["scripts.js"]
+  end
+
+  get "/assets/admin.js" do
+    content_type("application/javascript")
+    settings.assets["admin.js"]
   end
 
   get "/assets/screen.css" do
