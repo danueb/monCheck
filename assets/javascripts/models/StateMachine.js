@@ -13,6 +13,10 @@ App.Models.StateMachine = Backbone.Model.extend({
     return this.get('currentView') === 'home' ? true : false;
   },
 
+  onAbout: function(){
+    return this.get('currentView') === 'about' ? true : false;
+  },
+
   currentMon: function(){
     if (this.get('currentMon') === null) {
       return null;
@@ -22,12 +26,27 @@ App.Models.StateMachine = Backbone.Model.extend({
 
   /* navigation */
 
+  goToHome: function(){
+    this.set({ 'currentView': 'home' });
+    this.goToMon(this.get('currentMon'));
+  },
+
+  goToAbout: function(){
+    this.set({ 'currentView': 'about' });
+    App.router.navigate('/about');  
+  },
+
   goToMon: function(id){
     var mon = this.get('mons').findMon(id);
     if(mon){
       App.router.navigate('/mon/' + mon.get('name'));
       this.set({ 'currentMon': this.get('mons').findMon(id).get('id') });
-    }
+    } 
+    // is the code below necessary anywhere?
+    //
+    // else {
+    //   App.router.navigate('/');
+    // }
   },
 
   goToPrevMon: function(){

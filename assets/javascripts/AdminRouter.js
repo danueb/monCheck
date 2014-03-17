@@ -1,8 +1,6 @@
-App.Router = Backbone.Router.extend({
+App.AdminRouter = Backbone.Router.extend({
   routes: {
-    "": "index",
-    "about": "about",
-    "mon/:monName": "mon"
+    "": "index"
   },
 
   initialize: function() {
@@ -20,15 +18,6 @@ App.Router = Backbone.Router.extend({
 
     $motherDiv.empty();
     $motherDiv.append(this.mainView.render().el);    
-  },
-  mon: function(monName) {
-    this.index();
-    App.viewMaster.goToMon(monName);
-  },
-
-  about: function() {
-    this.index();
-    App.viewMaster.goToAbout();
   }
 
 });

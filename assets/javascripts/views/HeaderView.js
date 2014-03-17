@@ -28,6 +28,8 @@ App.Views.Header = Backbone.View.extend({
 
   home: function() {
     this.viewMaster.goToHome();
+    // FIXME: why isn't this called via the listener?
+    this.toggleHomeButton();
   },
 
   chart: function() {
@@ -36,8 +38,13 @@ App.Views.Header = Backbone.View.extend({
   },
 
   about: function() {
-    // TODO: ABOUT
-    console.log('about button clicked');
+    if(this.viewMaster.onAbout()){
+      this.viewMaster.goToHome();
+    } else{
+      this.viewMaster.goToAbout();
+    }
+    // FIXME: why isn't this called via the listener?
+    this.toggleHomeButton();
   }
 
 });

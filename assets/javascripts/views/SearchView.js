@@ -2,7 +2,7 @@ App.Views.Search = Backbone.View.extend({
   className: 'search',
 
   initialize: function() {
-    _.bindAll(this, 'render');
+    _.bindAll(this, 'render', 'enter');
     this.template = Handlebars.compile( App.Templates.search );
     this.viewMaster = this.options.viewMaster;
   },
@@ -14,6 +14,13 @@ App.Views.Search = Backbone.View.extend({
       local: this.model
     }]);
     return this;
+  },
+
+  enter: function(){
+    //this is horrible
+    console.log('whoop');
+    var monName = $('.searchbox').val();
+    this.viewMaster.goToMon($('.searchbox').val());
   },
 
   events: {
