@@ -8,10 +8,10 @@ class Moncheck < Sinatra::Base
       env.append_path(settings.root + "/assets/javascripts")
       env.append_path(settings.root + "/assets/stylesheets")
 
-      # if ENV["RACK_ENV"] == "production"
-      #   env.js_compressor  = YUI::JavaScriptCompressor.new
-      #   env.css_compressor = YUI::CssCompressor.new
-      # end
+      if ENV["RACK_ENV"] == "production"
+        env.js_compressor  = YUI::JavaScriptCompressor.new
+        env.css_compressor = YUI::CssCompressor.new
+      end
     })
   end
 
