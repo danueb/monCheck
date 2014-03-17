@@ -41,9 +41,12 @@ App.Models.StateMachine = Backbone.Model.extend({
     if(mon){
       App.router.navigate('/mon/' + mon.get('name'));
       this.set({ 'currentMon': this.get('mons').findMon(id).get('id') });
-    } else {
-      App.router.navigate('/');
-    }
+    } 
+    // is the code below necessary anywhere?
+    //
+    // else {
+    //   App.router.navigate('/');
+    // }
   },
 
   goToPrevMon: function(){

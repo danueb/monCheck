@@ -58,7 +58,13 @@ App.Views.Main = Backbone.View.extend({
   handleKey: function(e) {
     // I really wish I could do this the backbone way, 
     // but it doesn't look possible
-    if ($(e.target).is('input')) { return true }
+    if ($(e.target).is('input')) {
+      if(e.keyCode === 13){
+        //this is the most roundabout thing in the whole world
+        App.router.mainView.searchView.enter();
+      }
+      return true;
+    }
     if(App.viewMaster.onHome() && App.viewMaster.currentMon()){
       if(e.keyCode === 37){
         App.viewMaster.goToPrevMon();
